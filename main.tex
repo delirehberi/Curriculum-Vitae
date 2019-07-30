@@ -1,0 +1,141 @@
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+% personal data
+\name{Sezer}{Tanrıverdioğlu}
+%\title{Resumé title}
+\address{Yuzyil Mah. Fetih Cad. 56. Sokak No 9}{34480 İstanbul}{Bagcilar}
+\phone[mobile]{(0535)~701~16~19}
+%\phone[fax]{+3~(456)~789~012}
+\email{sezertanriverdi@gmail.com}
+\homepage{github.com/microgenius}
+%\extrainfo{additional information}
+\photo[80pt][0.4pt]{assets/picture}
+%\quote{Some quote}
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+\section{Education}
+\cventry{2009--2013}{Trakya University}{\textnormal {Faculty of Engineering and Architecture}}{}{\newline \textbf{Computer Science (Bachelors Degree)}}{}  % arguments 3 to 6 can be left empty
+
+\section{Experience}
+\subsection{Professional}
+\cventry{12/2018 - Present}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Etiya}}}{}{}
+{
+	\textnormal
+	{
+		As a member of development team, managed e-commerce CRM, Order Management module and implement core services using various technologies that include JAVA 8, Spring Boot, Hibernate, PostgreSQL
+	}
+	\\
+	\begin{itemize}%
+		\item SpringBoot Application Development
+		\item Development of API's and Services
+		\item Improving existing services \\
+	\end{itemize}
+}
+\cventry{09/2018 - 12/2018}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Idea Technology Solutions}}}{}{}
+{
+	\begin{itemize}%
+		\item Backend-Web Application Development
+		\item Implementing new technologies to existing stacks \\
+	\end{itemize}
+}
+\cventry{01/2014 - 03/2018}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Idea Technology Solutions}}}{}{}
+{
+	\textnormal
+	{
+		As a software development professional, I tried to deliver the best software development activities from analysis phase to support phase for customers.\\ \\
+		I have been involved in the development of many applications during my work time. The applications I am involved in development processes are used by many important companies such as Turkcell, British American Tobacco, Uludağ, Banvit etc.
+	}
+	\\
+	\begin{itemize}%
+		\item Backend-Web Application Development
+		\item Mobile Application Development
+		\item Improving existing services
+		\item Development of API's and Services
+		\item Implementing new technologies to existing stacks
+	\end{itemize}
+}
+\pagebreak
+
+\section{Publications}
+\cvitemwithcomment{\textbf{Book}}{}
+{
+	I have written a book about JAVA with friend from university. Our main goal was explain JAVA basics with examples to people who wants to learn about JAVA. \\
+	\textbf{Yeni Başlayanlar için JAVA (Turkish Name)} \\
+	Our book has published from Kodlab and it has published 20th edition so far.
+}
+
+\section{Projects}
+\cvitemwithcomment{Etiya}{Videotron Project}{Spring Boot Backend Development}
+\cvitemwithcomment{Etiya}{Notification Engine Project}{Spring Boot and ActiveMQ Application}
+\cvitemwithcomment{Idea Tech}{Partnership Relation Management}{CRM Application (Fullstack)}
+\cvitemwithcomment{Idea Tech}{Dynamic Customer Dashboard}{A Dashboard Application Integrated with Customer Data (Fullstack)}
+\cvitemwithcomment{Idea Tech}{Product Recognition Application}{An Android Application for Image Recognation Process}
+\cvitemwithcomment{Idea Tech}{Field Management Application}{An Android Application for Manage Field Management Processes}
+
+\section{Language Proficiency}
+\cvitemwithcomment{\textbf{English}} {Intermediate}{Writing,reading and speaking}
+\pagebreak
+\section{Software Development Skills}
+\cvdoubleitem{\textbf{Programming Paradigms}}{Functional, Object Oriented}{Advanced}{}
+\cvdoubleitem{\textbf{Programming Paradigms}}{Reactive Programming}{Intermediate}{}
+\cvdoubleitem{\textbf{Programming Languages}}{Java, C\#}{Advanced}{}
+\cvdoubleitem{\textbf{Programming Languages}}{JavaScript, TypeScript}{Intermediate}{}
+\cvdoubleitem{\textbf{Frameworks}}{Spring Boot, dotnet core}{Advanced}{}
+\cvdoubleitem{\textbf{Databases}}{Oracle, postgreSQL, mongoDB, Redis}{Advanced}{}
+\cvdoubleitem{\textbf{Testing Frameworks}}{JUnit}{Intermediate}{}
+\cvdoubleitem{\textbf{Cloud Platforms}}{Firebase}{Intermediate}{}
+\cvdoubleitem{\textbf{Software Tools}}{Git, GitHub, BitBucket, Trello, Jenkins, JIRA}{Advanced}{}
+\cvdoubleitem{\textbf{Software Tools}}{ActiveMQ, RabbitMQ, Jenkins}{Advanced}{}
+\cvdoubleitem{\textbf{Software Toolkits}}{Maven, Gradle}{Advanced}{}
+
+\section{Interests}
+\cvitem{}{Video games, Movies, Insturmental music, Psychology, Systems and Patterns}
+
+\section{Personal}
+\cvdoubleitem{\textbf{Birth Date}}{29.09.1991}{}{}
+\cvdoubleitem{\textbf{Birth Place}}{Eminonu/Istanbul}{}{}
+\cvdoubleitem{\textbf{Driving Licence}}{Class B}{}{}
+\cvdoubleitem{\textbf{Martial Status}}{Single}{}{}
+\cvdoubleitem{\textbf{Military Service}}{Completed 30.08.2018}{}{}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+
+
+\end{document}
