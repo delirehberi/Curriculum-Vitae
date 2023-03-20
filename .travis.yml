@@ -2,9 +2,9 @@ sudo: required
 dist: trusty
 
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended cm-super
+- sudo apt-get -qq update && sudo apt-get install texlive
 script:
-- pdflatex -interaction=nonstopmode -halt-on-error -job-name=Sezer_Tanriverdioglu_CV main.tex
+- xelatex -interaction=nonstopmode -halt-on-error -job-name=Sezer_Tanriverdioglu_CV main.tex
 
 deploy:
   provider: releases

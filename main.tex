@@ -1,171 +1,186 @@
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
 
+\documentclass[]{cv-style}
+% Add 'print' as an option into the square bracket to remove colours from this template for printing.
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\sethyphenation[variant=american]{english}{} % Add words between the {} to avoid them to be cut
 
-% moderncv themes
-\moderncvstyle{casual}
-\moderncvcolor{blue}
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-\usepackage[utf8]{inputenc}
-
-% adjust the page margins
-\usepackage[scale=0.85]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}
-%\setlength{\makecvtitlenamewidth}{10cm}
-
-% personal data
-\name{Sezer}{Tanrıverdioğlu}
-%\title{Resumé title}
-\address{Yuzyil Mah. Fetih Cad. 56. Sokak No 9}{34480 İstanbul}{Bagcilar}
-\phone[mobile]{(0535)~701~16~19}
-%\phone[fax]{+3~(456)~789~012}
-\email{sezertanriverdi@gmail.com}
-\homepage{github.com/microgenius}
-%\extrainfo{additional information}
-\photo[80pt][0.4pt]{assets/picture}
-%\quote{Some quote}
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
-\makecvtitle
-\section{Education}
-\cventry{2009--2013}{Trakya University}{\textnormal {Faculty of Engineering and Architecture}}{}{\newline \textbf{Computer Science (Bachelors Degree)}}{}  % arguments 3 to 6 can be left empty
 
-\section{Experience}
-\subsection{Professional}
-\cventry{11/2020 - Present}{\textnormal{\textit{Software Consultant}}}{\textnormal{\textbf{Innovance}}}{}{}
-{
-	\textnormal
-	{
-		Providing Software Development services for companies on behalf of Innovance
-		\\
-		Fibabank: Working on transformation project for Call Center Platform
-	}
-	\\
-	\begin{itemize}%
-		\item Java 8+
-		\item SpringBoot Application Development
-		\item Java Swing \\
-	\end{itemize}
-}
-\cventry{12/2018 - 10/2020}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Etiya}}}{}{}
-{
-	\textnormal
-	{
-		I have worked in Etiya as a Backend Developer for two years. We developed backend systems for CRM application using in Canada (Videotron). At the Etiya I have worked with the large-sized team, development teams were located in different cities and countries.
-	}
-	\\
-	\begin{itemize}%
-		\item Java 8+
-		\item SpringBoot Application Development
-		\item Development of API's and Services
-		\item Improving existing services \\
-	\end{itemize}
-}
-\cventry{09/2018 - 12/2018}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Idea Technology Solutions}}}{}{}
-{
-	\textnormal
-	{
-		After six months of military service, I re-joined my old company. I took part in a transforming project. We had a CRM Web application developed as a Web Form application. We re-designed and developed this application in dotnet-core as a Web MVC application. I have been involved in the development process for the core modules of our application. We successfully completed the development of core modules and transferred this application to the development team
-	}
-	\\
-	\begin{itemize}%
-		\item Backend-Web Application Development
-		\item Implementing new technologies to existing stacks \\
-	\end{itemize}
-}
-\cventry{01/2014 - 03/2018}{\textnormal{\textit{Software Developer}}}{\textnormal{\textbf{Idea Technology Solutions}}}{}{}
-{
-	\textnormal
-	{   
+	\header{Sezer}{Tanriverdioglu}           % Your name
+	\lastupdated
+
+%----------------------------------------------------------------------------------------
+%   SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+
+	\begin{aside}
+%
+		\section{contact}
+		Kadinlardenizi Dist.
+		580. st, Aksoy Apartments
+		Kusadasi / Aydin
+		Turkiye
+		~
+		Cel +90 (535) 701 1619
+		~
+		sezertanriverdi
+		@gmail.com
+%
+		\section{languages}
+		Turkish
+		English
+%
+	\end{aside}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+	\section{Skills}
+	\vspace{-0.4cm}
+	Java, Kotlin, Git, Postgres, MongoDB, SpringBoot, JavaEE, JUnit, Docker, Redis, ApacheMQ, Kafka, Maven
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+	\section{Experience}
+
+	\begin{entrylist}
+%------------------------------------------------
+		\entry
+		{2021 May--Now}
+		{Just Appraised}
+		{San Fransisco, California (Remote)}
+		{\jobtitle{Senior Software Developer}\\
+		As a Software developer at Just Appraised, I have experience working with various technologies, including ActiveMQ, PostgreSQL, AWS S3, Redis, and Unit Tests. At Just Appraised, I have used these tools to create robust, scalable, and high-performing applications for our clients.
+
+		I have a strong understanding of the fundamentals of JavaEE, and I am always looking for ways to improve my skills and stay up to date with the latest developments in the field. I am confident in leveraging these technologies to deliver successful projects for our clients.}
+%------------------------------------------------
+		\entry
+		{2020 Nov--2021 Apr}
+		{Innovance}
+		{Istanbul, Turkiye (Remote)}
+		{\jobtitle{Senior Software Developer}\\
+		As a Java developer at Innovance, I joined a newly-created team working on an important call center project for our client, Fibabanka. The project was developed using SpringBoot, and I was able to quickly learn the logic of the project and make valuable contributions during my time on the team.
+		}
+%------------------------------------------------
+		\entry
+		{2020 Feb--2020 Oct}
+		{Etiya}
+		{Istanbul, Turkiye}
+		{\jobtitle{Senior Software Developer}\\
+		In my new role, I had the opportunity to work closely with the architecture teams, including solution architects and software architects, and was involved in the process of designing the project.
+
+		I also assisted in leading the newly-created backend team, which consisted mostly of junior developers. I helped the team understand the technical requirements and managed their progress to ensure that we met our goals within the given time period. I am satisfied with my ability to contribute to the development and growth of the team and am confident in my ability to lead and mentor others.
+		}
+%------------------------------------------------
+		\entry
+		{2018 Dec--2020 Feb}
+		{Etiya}
+		{Istanbul, Turkiye}
+		{\jobtitle{Software Developer}\\
+		I joined Etiya as a Backend Developer and was immediately tasked with working on an important project for a Canadian telecommunications company. The technology stack for the project included SpringBoot, PostgreSQL, ElasticSearch, ActiveMQ, and Kafka.
+
+		During my time on the project, I made significant contributions, including the development of valuable features and solutions.
+
+		In addition to my technical responsibilities, I also gained experience working with teams across cities and countries. This required me to effectively communicate and collaborate remotely, and I am proficient in remote working as a result.
+		}
+%------------------------------------------------
+		\entry
+		{2014 Jan--2018 Dec}
+		{Idea Technology Solutions}
+		{Istanbul, Turkiye}
+		{\jobtitle{Software Developer}\\
 		At the beginning of my career, I was a member of the mobile application development team. Our applications are consumed by many large-sized companies in Turkey and also other countries such as South Africa and Iran.
-		\\
-		\\
 		After a few years of mobile development, I was also responsible for backend services consumed by mobile applications. Our mobile applications were designed to work offline and we re-designed these services to work offline and online together
-		\\
-		\\
-		On the Android side, I experienced JAVA which we converted some parts to Kotlin later. On the other hand on the backend side, I developed our web services with dotnet (C\#) as Web API. I also had familiar with Oracle DB, PostgreSQL and MySQL
-	}
-	\\
-	\begin{itemize}%
-		\item Backend-Web Application Development
-		\item Mobile Application Development - Native
-		\item Improving existing services
-		\item Development of API's and Services
-		\item Implementing new technologies to existing stacks
-		\item Java 8+
-		\item Kotlin
-		\item dotnet core MVC
-	\end{itemize}
-}
-\pagebreak
+		On the Android side, I experienced JAVA which we converted some parts to Kotlin later. On the other hand on the backend side, I developed our web services with dotnet (C\#) as Web API. I also had familiar with Oracle DB, PostgreSQL, and MySQL
 
-\section{Publications}
-\cvitemwithcomment{\textbf{Book}}{}
-{
-	I have written a book about JAVA with friend from university. Our main goal was explain JAVA basics with examples to people who wants to learn about JAVA. \\
-	\textbf{Yeni Başlayanlar için JAVA (Turkish Name)} \\
-	Our book has published from Kodlab and it has published 20th edition so far.
-}
+		}
 
-\section{Projects}
-\cvitemwithcomment{Etiya}{Videotron Project}{Spring Boot Backend Development}
-\cvitemwithcomment{Etiya}{Notification Engine Project}{Spring Boot and ActiveMQ Application}
-\cvitemwithcomment{Idea Tech}{Partnership Relation Management}{CRM Application (Fullstack)}
-\cvitemwithcomment{Idea Tech}{Dynamic Customer Dashboard}{A Dashboard Application Integrated with Customer Data (Fullstack)}
-\cvitemwithcomment{Idea Tech}{Product Recognition Application}{An Android Application for Image Recognation Process}
-\cvitemwithcomment{Idea Tech}{Field Management Application}{An Android Application for Manage Field Management Processes}
+	\end{entrylist}
 
-\section{Language Proficiency}
-\cvitemwithcomment{\textbf{English}} {Intermediate}{Writing,reading and speaking}
-\pagebreak
-\section{Software Development Skills}
-\cvdoubleitem{\textbf{Programming Paradigms}}{Functional, Object Oriented}{Advanced}{}
-\cvdoubleitem{\textbf{Programming Paradigms}}{Reactive Programming}{Intermediate}{}
-\cvdoubleitem{\textbf{Programming Languages}}{Java}{Advanced}{}
-\cvdoubleitem{\textbf{Programming Languages}}{Kotlin, JavaScript, TypeScript, C\#}{Intermediate}{}
-\cvdoubleitem{\textbf{Frameworks}}{Spring Boot}{Advanced}{}
-\cvdoubleitem{\textbf{Frameworks}}{dotnet core}{Intermediate}{}
-\cvdoubleitem{\textbf{Databases}}{Oracle, postgreSQL, mongoDB, Redis}{Advanced}{}
-\cvdoubleitem{\textbf{Testing Frameworks}}{JUnit}{Intermediate}{}
-\cvdoubleitem{\textbf{Cloud Platforms}}{Firebase}{Intermediate}{}
-\cvdoubleitem{\textbf{Software Tools}}{Git, GitHub, BitBucket, Trello, Jenkins, JIRA}{Advanced}{}
-\cvdoubleitem{\textbf{Software Tools}}{ActiveMQ, RabbitMQ, Jenkins}{Advanced}{}
-\cvdoubleitem{\textbf{Software Toolkits}}{Maven, Gradle}{Advanced}{}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-\section{Interests}
-\cvitem{}{Video games, Movies, Insturmental music, Psychology, Systems and Patterns}
+	\section{Education}
 
-\section{Personal}
-\cvdoubleitem{\textbf{Birth Date}}{29.09.1991}{}{}
-\cvdoubleitem{\textbf{Birth Place}}{Eminonu/Istanbul}{}{}
-\cvdoubleitem{\textbf{Driving Licence}}{Class B}{}{}
-\cvdoubleitem{\textbf{Martial Status}}{Single}{}{}
-\cvdoubleitem{\textbf{Military Service}}{Completed 30.08.2018}{}{}
+	\begin{entrylist}
+%------------------------------------------------
+		\entry
+		{2009--2013}
+		{Bachelor Degree {\normalfont Computer Engineering}}
+		{Trakya University  |  Edirne, Turkiye}
+		{\vspace{-0.3cm}}
+%------------------------------------------------
+	\end{entrylist}
 
+%----------------------------------------------------------------------------------------
+%   SOFT SKILLS SECTION
+%----------------------------------------------------------------------------------------
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+	\section{Publications}
+	\begin{entrylist}
+%------------------------------------------------
+		\entry
+		{}
+		{Java Book - Yeni Başlayanlar için JAVA (Turkish Name)}
+		{Kodlab}
+		{
+			\\
+			\\
+			I have written a book about JAVA with a friend from university. Our main goal was to explain JAVA basics with examples to people who want to learn about JAVA.
+			\\
+			\\
+			Yeni Başlayanlar için JAVA (Turkish Name)
+			\\
+			Our book has been published by Kodlab and it has been published in its 25th edition so far.
 
+		}
+		{\vspace{-0.3cm}}
+	\end{entrylist}
+%----------------------------------------------------------------------------------------
+%   Voluntariness SECTION
+%----------------------------------------------------------------------------------------
+
+	\section{Communities}
+	\begin{entrylist}
+%------------------------------------------------
+		\entry
+		{}
+		{Contributor / Mentor}
+		{Turkiye Java Community}
+		{
+			Non-profit software community to share knowledge
+			\\
+			\\
+			I'm helping the community to organize events and share knowledge with the community members
+		}
+		{\vspace{-0.3cm}}
+	\end{entrylist}
+%----------------------------------------------------------------------------------------
+%       INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+	\section{Interests}
+
+	\begin{entrylist}
+%------------------------------------------------
+		\entry
+		{Professional}
+		{- {\normalfont Continue learning, work and develop a career in what I'm passionate about, which are all the information technologies. }}
+		{}
+		{\vspace{-0.3cm}}
+%------------------------------------------------
+		\entry
+		{Personal}
+		{- {\normalfont Be economically independent, have a balance between my work and my personal life, manage my time in the activities that I like, such as video games, music, gardening and movies }}
+		{}
+		{}
+%------------------------------------------------
+	\end{entrylist}
 
 \end{document}
