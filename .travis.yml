@@ -4,7 +4,7 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install texlive
 script:
-- xelatex -interaction=nonstopmode -halt-on-error -job-name=Sezer_Tanriverdioglu_CV main.tex
+- lualatex -interaction=nonstopmode -halt-on-error resume.tex
 
 deploy:
   provider: releases
