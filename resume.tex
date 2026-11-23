@@ -1,105 +1,204 @@
-%!TEX TS-program = xelatex
+%!TEX program = pdflatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
+% Emre Yilmaz -- polyglot software engineer resume (two A4 pages, single column).
+% Build: latexmk -pdf resume.tex
 
+\documentclass[11pt,a4paper]{article}
 
 %-------------------------------------------------------------------------------
-% CONFIGURATIONS
+%	PACKAGES
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,left=18mm,right=18mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{mutedtext}{HTML}{4A4A4A}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent]{hyperref}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% Emit ToUnicode maps so that copy/paste and ATS parsers read the text correctly.
+\input{glyphtounicode}
+\pdfgentounicode=1
 
-% Specify the location of the included fonts
-\fontdir[fonts/]
-
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-pink}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
-
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
+\hypersetup{
+  pdftitle={Emre Yilmaz -- Senior Software Engineer},
+  pdfauthor={Emre Yilmaz},
+  pdfsubject={Resume},
+}
 
 %-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
+%	LAYOUT
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
-\name{Emre}{Yilmaz}
-\position{Senior Fullstack Web Developer}
-\address{Kusadasi / Aydin - Turkiye}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
 
-\mobile{+90 (541) 385-12-73}
-\email{z@emre.xyz}
-\github{delirehberi}
-\linkedin{linkedin.com/in/delirehberi/}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-\reddit{aybarscengaver}
-\medium{delirehberi}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra informations}
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}
+  {}
+  [{\color{accent}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=1pt,
+  topsep=2pt,
+  parsep=0pt,
+  label={\textcolor{accent}{\textbullet}},
+}
+
+% Role line: bold role + right-aligned dates; italic employer + right-aligned location.
+% Arguments: #1 role, #2 employer, #3 location, #4 dates
+\newcommand{\role}[4]{%
+  \par\addvspace{5pt}\noindent
+  \textbf{#1}\hfill{\small #4}\\
+  {\itshape #2}\hfill{\small\color{mutedtext} #3}\par\nopagebreak
+}
+
+%-------------------------------------------------------------------------------
+%	HEADER
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
-	\makecvheader[C]
-
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-	\makecvfooter
-	{\today}
-	{Emre Yilmaz~~~·~~~@delirehberi}
-	{\thepage}
-
-
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-	\input{resume/summary.tex}
-	\input{resume/experience.tex}
-	\input{resume/education.tex}
-	\input{resume/talks.tex}
-	\input{resume/communities.tex}
-	\input{resume/skills.tex}
-	\input{resume/interests.tex}
-  \input{resume/references.tex}
-
+\begin{center}
+  {\LARGE\bfseries Emre Yilmaz}\\[3pt]
+  {\large Senior Software Engineer --- Polyglot Development \& Software Architecture}\\[5pt]
+  {\small
+    Aydin, Turkiye (Remote)\enspace|\enspace
+    \href{mailto:z@emre.xyz}{z@emre.xyz}\enspace|\enspace
+    \href{https://github.com/delirehberi}{github.com/delirehberi}\enspace|\enspace
+    \href{https://www.linkedin.com/in/delirehberi/}{linkedin.com/in/delirehberi}\enspace|\enspace
+    \href{https://emre.xyz}{emre.xyz}}
+\end{center}
 
 %-------------------------------------------------------------------------------
+\section{Professional Summary}
+%-------------------------------------------------------------------------------
+Hands-on software engineer with nearly 20 years of experience building production
+software across PHP (Symfony), Python (Django, Flask), and JavaScript/TypeScript
+(Node.js, React, Vue.js). Advanced in Haskell and Nix; working knowledge of Go; intermediate in Rust.
+I approach each system through its paradigm and architecture rather than a single
+framework, working across functional, object-oriented, and procedural code. My work
+spans backend services and APIs, database-driven web platforms, frontend applications,
+and infrastructure on AWS and Google Cloud. I modernize legacy systems, and I have
+worked with remote and international teams since 2020.
+
+%-------------------------------------------------------------------------------
+\section{Technical Expertise}
+%-------------------------------------------------------------------------------
+\begin{itemize}[leftmargin=0pt, label={}, itemsep=2pt]
+  \item \textbf{Languages \& paradigms:} PHP, JavaScript, TypeScript, Haskell, Python, Nix, Bash.
+    Paradigms: functional, object-oriented, procedural.
+    \emph{Working knowledge:} Go. \emph{Intermediate:} Rust.
+  \item \textbf{Backend \& APIs:} Symfony, Sylius, vanilla PHP, Node.js, Express.js, Django, Flask, RESTful APIs.
+  \item \textbf{Frontend:} React, Next.js, Vue.js, AngularJS, HTML5, CSS3, Sass, Webpack, Shopify, Webflow.
+  \item \textbf{Data:} PostgreSQL.
+  \item \textbf{Infrastructure \& delivery:} Nix, NixOps, AWS (Kinesis, EC2), Google Cloud, Docker, Nginx, GitLab, Jenkins.
+  \item \textbf{Engineering practice:} system architecture, legacy modernization, CMS and platform migration,
+    quality assurance, project coordination.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Professional Experience}
+%-------------------------------------------------------------------------------
+\role{Software Developer (Project Based)}{Routr.com}{Remote}{July 2025 -- Present}
+\begin{itemize}
+  \item Building the RTS route tracking service in \textbf{Haskell} with \textbf{Nix} (haskell.nix) for reproducible
+    builds, containerized with \textbf{Docker} and released through scripted deployments.
+  \item Implemented routing and geodata API clients, \textbf{AWS Kinesis} consumption, a job queue for asynchronous
+    filtering and imports, and a web dashboard with route visualization.
+\end{itemize}
+
+\role{Founding Developer}{Workouse}{Aydin, Turkiye}{June 2023 -- Present}
+\begin{itemize}
+  \item Founded and solely own Workouse, a one-person company delivering custom \textbf{Shopify} and \textbf{Webflow}
+    development for clients.
+  \item Build and deliver client projects end to end, owning technical architecture, quality assurance,
+    client communication, and project management.
+\end{itemize}
+
+\role{Senior Software Developer}{7Cups.com}{Palo Alto, CA, USA (Remote)}{June 2020 -- July 2023}
+\begin{itemize}
+  \item Developed new features and maintained existing backend services and APIs; core services written in
+    vanilla \textbf{PHP 7+}.
+  \item Built features for an in-house application using \textbf{Symfony}, \textbf{ReactJS}, and \textbf{Node.js},
+    and worked on experimental feature development.
+\end{itemize}
+
+\role{Reliability Engineer and Software Developer}{SR Media}{Switzerland (Remote)}{April 2020 -- August 2020}
+\begin{itemize}
+  \item Built an education platform with \textbf{Symfony} and \textbf{ReactJS}, and maintained its existing features.
+  \item Deployed the platform to several AWS instances with zero-downtime releases using \textbf{Nix}.
+\end{itemize}
+
+\role{CTO, Developer}{Eres Biotech}{Ankara, Turkiye}{Sept. 2016 -- Jan. 2019}
+\begin{itemize}
+  \item Led end-to-end development of \textbf{Bilimkutusu.com}, an e-commerce platform on \textbf{Sylius}
+    (Symfony): product and inventory logic in \textbf{PostgreSQL}, custom Sylius plugins, and a frontend built
+    with Webpack, Sass, and vanilla JavaScript.
+  \item Evolved \textbf{Bilimma.com}, a science news portal, from WordPress to a \textbf{Next.js} rebuild for
+    performance, then to \textbf{Webflow} to reduce technical overhead while keeping dynamic content workflows.
+\end{itemize}
+
+\role{NodeJS Developer}{Onedio}{Ankara, Turkiye}{Aug. 2016 -- Jan. 2017}
+\begin{itemize}
+  \item Cloned the onedio.com codebase into two new sites (onedio.co and onedio.ru) and added multi-language
+    support, using \textbf{Node.js} and \textbf{Express.js}.
+\end{itemize}
+
+\role{Fullstack Senior Web Developer}{Bulut Yazilim A.S.}{Ankara, Turkiye}{Nov. 2014 -- Aug. 2016}
+\begin{itemize}
+  \item Led the \textbf{TRT} (Turkish Radio and Television) news portals: 42 multilingual subsites built on
+    \textbf{Symfony 2.4}, architected and delivered independently within 9 months.
+  \item Delivered \textbf{T\"UB\.ITAK ULAKB\.IM} Dergipark (academic journal management) and lehceler.com
+    (TRT's Turkish dialect dictionary).
+  \item Modernized infrastructure with \textbf{Docker}, \textbf{Google Cloud}, and \textbf{GitLab}, with
+    scalable deployments across Nginx-powered environments.
+\end{itemize}
+
+\par\addvspace{6pt}
+\noindent\textbf{Earlier experience}
+\begin{itemize}[itemsep=0pt]
+  \item \textbf{Atolye15}, Senior PHP Developer, Izmir (2013--2016): Symfony back ends, AngularJS front-end
+    integrations, RESTful APIs; organized WTK Izmir, the city's first web development conference.
+  \item \textbf{Egegen}, Team Lead, Izmir (2013): led a PHP/CodeIgniter team on web application delivery.
+  \item \textbf{Marmara Web}, Senior PHP Developer, Istanbul (2013): full-stack client projects in pure PHP and JavaScript.
+  \item \textbf{RGBilisim}, Medior PHP Developer, Istanbul (2011--2012): custom CMS framework; Bash and Jenkins deployment automation.
+  \item \textbf{KabinEkibi}, WordPress Developer (2009); \textbf{Ekol Shop}, PHP Developer (2007--2008),
+    maintaining a high-traffic e-commerce platform; \textbf{Ege Internet}, Junior Developer (2007).
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Selected Projects}
+%-------------------------------------------------------------------------------
+\begin{itemize}
+  \item \textbf{sitemap-checker} (Go, open source) --- command-line tool that validates the URLs in a sitemap file,
+    reports broken links, and confirms that sitemap entries are accessible.
+    \href{https://github.com/workouse/sitemap-checker}{github.com/workouse/sitemap-checker}.
+  \item \textbf{Open-source contributions} --- framework enhancements and tooling optimizations in PHP communities,
+    maintained publicly at \href{https://github.com/delirehberi}{github.com/delirehberi}.
+  \item \textbf{Technical writing} --- articles on programming and engineering at
+    \href{https://emre.xyz}{emre.xyz} and \href{https://medium.com/@delirehberi}{medium.com/@delirehberi}.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Education \& Community}
+%-------------------------------------------------------------------------------
+\role{Art \& History}{Adnan Menderes University}{Aydin, Turkiye}{Sept. 2021 -- Present}
+\role{Furniture Design (not completed)}{Dokuz Eylul University}{Izmir, Turkiye}{Sept. 2007 -- June 2009}
+\begin{itemize}
+  \item \textbf{Founder}, AnkaraPHP local PHP developer community (Dec. 2015 -- June 2018); \textbf{Founder},
+    Haskell Turkiye (Dec. 2017 -- Present); \textbf{Founder}, Aydin Software Developer Network (Sept. 2020 -- Present).
+  \item \textbf{Founder}, Webend backend-focused developer conference, organizing four editions across Istanbul,
+    Izmir, and Ankara.
+  \item \textbf{Speaker} on PHP/Symfony, Nix/NixOps, and ActivityPub at PHP Istanbul, GDG Ankara, GDG Izmir,
+    DevFest 2018, and other meetups.
+\end{itemize}
+
 \end{document}
